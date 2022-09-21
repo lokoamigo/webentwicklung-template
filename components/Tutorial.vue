@@ -115,8 +115,97 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import draggable from 'vuedraggable'
 export default {
   name: 'NuxtTutorial',
+  components:  {
+    draggable
+  },
+  data: () => ({ 
+      currentCaption:"",
+      newTicket:{
+            panelCaption:"",
+            message:"",
+      },
+      cols:[
+        {
+          caption:"backlog",
+          panels:[
+           {
+            panelCaption:"caption10",
+            message:"testmessage",
+           } 
+            
+          ]
+        },
+        {
+          caption:"schritt 1",
+          panels:[
+           {
+            panelCaption:"caption9",
+            message:"testmessage",
+           },
+           {
+            panelCaption:"caption8",
+            message:"asdfasdf",
+           },
+           {
+            panelCaption:"caption7",
+            message:"testmeqwertqertssage",
+           },
+           {
+            panelCaption:"caption6",
+            message:"testshwrthmessage",
+           },
+           {
+            panelCaption:"caption5",
+            message:"testmesxcvbxcvbzuiosage",
+           },
+           {
+            panelCaption:"caption4",
+            message:"testmessqwertage",
+           },
+            
+          ]
+        },
+        {
+          caption:"schritt 2",
+          panels:[
+           {
+            panelCaption:"caption3",
+            message:"testmessage",
+           } 
+            
+          ]
+        },
+        {
+          caption:"blockiert",
+          panels:[
+           {
+            panelCaption:"caption2",
+            message:"testmessage",
+           } 
+            
+          ]
+        },
+        {
+          caption:"fertig",
+          panels:[
+           {
+            panelCaption:"caption1",
+            message:"testmessage",
+           } 
+            
+          ]
+        },         
+      ],
+      isModalVisible: false,
+
+
+  }),
+  methods: {
+  //hier kommen js methoden rein, die in vue aufgerufen werden.
+  }
 }
 </script>
